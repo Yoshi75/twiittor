@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ツイッターのようなもの</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+<header>
+  <ul>
+    <li><%= link_to "ホーム", root_path %></li>
+    <li><%= link_to "つぶやき一覧", tweets_path %></li>
+    <li><%= link_to "新しくつぶやく", new_tweet_path %></li>
+    <img src="<%= asset_path "apple-touch-icon-192x192.png" %>" width="50" align="middle" hspace=100>
+
+  </ul>
+</header>  
+  
+
+<%= yield %>
+
+</body>
+</html>
